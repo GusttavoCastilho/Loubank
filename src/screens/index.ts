@@ -1,5 +1,7 @@
 import { Welcome } from './Welcome'
+import { Home } from './Home'
 
 export {
-  Welcome
+  Welcome,
+  Home
 }
