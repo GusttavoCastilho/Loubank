@@ -1,3 +1,4 @@
 import { colors } from './colors'
+import { CreditCardData, FinanceCardData } from './data'
 
-export { colors }
+export { colors, CreditCardData, FinanceCardData }
