@@ -5,7 +5,7 @@ import MetalsIcon from '../../assets/images/metals.svg'
 
 export function MetalsCard() {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="container">
       {/* Currencie */}
       <View>
         <Text style={styles.smallText}>Metals</Text>
