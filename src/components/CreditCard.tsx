@@ -11,7 +11,10 @@ type CardProps = {
 
 export function CreditCard({ value, numberCC, color }: CardProps) {
   return (
-    <TouchableOpacity style={[styles.container, { backgroundColor: color }]}>
+    <TouchableOpacity
+      testID="container"
+      style={[styles.container, { backgroundColor: color }]}
+    >
       <VisaLogoIcon />
 
       {/* value */}
