@@ -44,6 +44,14 @@
     "preset": "react-native",
     "moduleNameMapper": {
       "^assets/images/(\\.svg)$": "__mocks__/svgMock.js"
-    }
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.tsx",
+      "!src/**/*.spec.tsx"
+    ],
+    "coverageReporters": [
+      "lcov"
+    ]
   }
 }
