@@ -6,12 +6,19 @@ import {
   StyleSheet,
   Platform
 } from 'react-native'
+import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { colors } from '../constants'
 
 import BalanceIcon from '../../assets/images/balance-welcome.svg'
 import LogoIcon from '../../assets/images/logo.svg'
 
-export function Welcome() {
+type RootStackParamList = {
+  HomePage: undefined
+}
+
+type NavigationProps = NativeStackScreenProps<RootStackParamList, 'HomePage'>
+
+export function Welcome({ navigation }: NavigationProps) {
   return (
     <View style={styles.container}>
       {/* Logo */}
@@ -28,7 +35,10 @@ export function Welcome() {
         Best solutions to save you {'\n'} balance and transactions.
       </Text>
 
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate('HomePage')}
+      >
         <Text style={styles.titleButton}>Get Started</Text>
       </TouchableOpacity>
     </View>
