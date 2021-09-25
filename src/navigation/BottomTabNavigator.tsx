@@ -1,9 +1,10 @@
 import React from 'react'
 import { View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { Home } from '../screens'
+import { Home, MyCards } from '../screens'
 import { colors } from '../constants'
 import HomeIcon from '../../assets/images/home.svg'
+import CardIcon from '../../assets/images/card.svg'
 
 const Tab = createBottomTabNavigator()
 
@@ -33,6 +34,15 @@ function BottomTabNavigator() {
         options={{
           headerShown: false,
           tabBarIcon: () => <HomeIcon />
+        }}
+      />
+
+      <Tab.Screen
+        name="MyCards"
+        component={MyCards}
+        options={{
+          headerShown: false,
+          tabBarIcon: () => <CardIcon />
         }}
       />
     </Tab.Navigator>
